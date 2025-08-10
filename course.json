@@ -3,6 +3,7 @@
   "description": "Тестовый курс для проверки плагина",
   "lessons": [
     { "id": "lesson01", "title": "Базовая сцена", "file": "lessons/m1y1.md" },
-    { "id": "lesson02", "title": "Скрипты в Unity", "file": "lessons/m1y2.md" }
+    { "id": "lesson02", "title": "Скрипты в Unity", "file": "lessons/m1y2.md" },
+    { "id": "lesson03", "title": "Переменные в Unity", "file": "lessons/m1y3.md" }
   ]
 }
