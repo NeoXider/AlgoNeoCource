@@ -1,9 +1,8 @@
 {
-  "title": "Пример",
-  "description": "Тестовый курс для проверки плагина",
+  "title": "Unity курс C#",
+  "description": "Курс по изучению C# в юнити.",
   "lessons": [
-    { "id": "lesson01", "title": "Базовая сцена", "file": "lessons/m1y1.md" },
-    { "id": "lesson02", "title": "Скрипты в Unity", "file": "lessons/m1y2.md" },
-    { "id": "lesson03", "title": "Переменные в Unity", "file": "lessons/m1y3.md" }
+    { "id": "m2y1", "title": "Основы синтаксиса C#", "file": "lessons/m2/y1.md" },
+    { "id": "m2y2", "title": "Переменные и типы данных", "file": "lessons/m2/y2.md" }
   ]
 }
