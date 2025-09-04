@@ -4,6 +4,7 @@
   "lessons": [
     { "id": "m2y1", "title": "Основы синтаксиса C#", "file": "lessons/m2/y1.md" },
     { "id": "m2y2", "title": "Переменные и типы данных", "file": "lessons/m2/y2.md" },
-    { "id": "m2y3", "title": "Арифметические операции", "file": "lessons/m2/y3.md" }
+    { "id": "m2y3", "title": "Арифметические операции", "file": "lessons/m2/y3.md" },
+    { "id": "m2y4", "title": "Методы и События", "file": "lessons/m2/y4.md" }
   ]
 }
