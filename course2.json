@@ -1,0 +1,12 @@
+{
+  "title": "Unity курс C#",
+  "description": "Курс по изучению C# в юнити.",
+  "lessons": [
+    { "id": "l2m2y1", "title": "Основы синтаксиса C#", "file": "lessons2/m2/y1.md" },
+    { "id": "l2m2y2", "title": "Переменные и типы данных", "file": "lessons2/m2/y2.md" },
+    { "id": "l2m2y3", "title": "Арифметические операции", "file": "lessons2/m2/y3.md" },
+    { "id": "l2m2y4", "title": "Методы и События", "file": "lessons2/m2/y4.md" },
+    { "id": "l2m3y1", "title": "Условные операторы и логические выражения", "file": "lessons2/m3/y1.md" },
+    { "id": "l2m3y2", "title": "Циклы и повторяющиеся действия", "file": "lessons2/m3/y2.md" }
+  ]
+}
