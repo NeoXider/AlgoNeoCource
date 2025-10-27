@@ -1,0 +1,8 @@
+{
+  "title": "Unity курс (1 год обучения)",
+  "description": "Курс по основам Unity и разработке игр.",
+  "lessons": [
+    { "id": "l1m2y3", "title": "Terrain в Unity", "file": "lessons1/m2/y3.md" }
+  ]
+}
+
