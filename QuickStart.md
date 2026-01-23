@@ -242,8 +242,8 @@ rules:
 
 ## Что дальше?
 
-- 📖 [CourseGuide.md](CourseGuide.md) — полный обзор возможностей
-- 📋 [CourseStyleGuide.md](CourseStyleGuide.md) — правила оформления
+- 📖 [CourseTechGuide.md](CourseTechGuide.md) — полный обзор возможностей
+- 📋 [LessonMethodGuide.md](LessonMethodGuide.md) — правила оформления
 - 📚 [Docs/LessonTemplates.md](Docs/LessonTemplates.md) — готовые шаблоны для копирования
 - 🔍 [Docs/Examples/](Docs/Examples/) — примеры всех фич
 

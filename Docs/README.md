@@ -9,8 +9,8 @@
 Если вы только начинаете, читайте в таком порядке:
 
 1. **[../QuickStart.md](../QuickStart.md)** — создайте первый урок за 5 минут
-2. **[../CourseGuide.md](../CourseGuide.md)** — обзор всех возможностей системы
-3. **[../CourseStyleGuide.md](../CourseStyleGuide.md)** — правила оформления и педагогический подход
+2. **[../CourseTechGuide.md](../CourseTechGuide.md)** — обзор всех возможностей системы
+3. **[../LessonMethodGuide.md](../LessonMethodGuide.md)** — правила оформления и педагогический подход
 4. **[CourseMarkdownSpec.md](CourseMarkdownSpec.md)** — полная спецификация формата Markdown
 
 ### Справочники (Reference)
@@ -122,8 +122,8 @@
 AlgoNeoCource/
 ├── README.md                    # Обзор проекта, ссылки на документацию
 ├── QuickStart.md                # Быстрый старт за 5 минут
-├── CourseGuide.md               # Краткий обзор возможностей
-├── CourseStyleGuide.md          # Правила оформления и педагогика
+├── CourseTechGuide.md           # Краткий обзор возможностей
+├── LessonMethodGuide.md         # Правила оформления и педагогика
 │
 ├── course1.json                 # Структура курса 1
 ├── course2.json                 # Структура курса 2
@@ -167,9 +167,9 @@ AlgoNeoCource/
 **Результат:** Вы сможете создать базовый урок с текстом и слайдами.
 
 ### Уровень 2: Базовый (30-40 минут)
-1. Прочитайте [../CourseGuide.md](../CourseGuide.md) — все возможности
+1. Прочитайте [../CourseTechGuide.md](../CourseTechGuide.md) — все возможности
 2. Изучите [LessonTemplates.md](LessonTemplates.md) — готовые шаблоны
-3. Прочитайте [../CourseStyleGuide.md](../CourseStyleGuide.md) — правила оформления
+3. Прочитайте [../LessonMethodGuide.md](../LessonMethodGuide.md) — правила оформления
 4. Попробуйте примеры из [Examples/](Examples/)
 
 **Результат:** Вы сможете создавать уроки с медиа, тестами и проверками.
@@ -200,7 +200,7 @@ AlgoNeoCource/
 → [LessonTemplates.md](LessonTemplates.md) — копируйте и адаптируйте
 
 ### Как правильно оформить урок?
-→ [../CourseStyleGuide.md](../CourseStyleGuide.md) — правила и педагогика
+→ [../LessonMethodGuide.md](../LessonMethodGuide.md) — правила и педагогика
 
 ### Где посмотреть примеры?
 → [Examples/](Examples/) — практические примеры всех фич

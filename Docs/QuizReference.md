@@ -492,7 +492,7 @@ answers:
 
 ## См. также
 
-- [CourseGuide.md](../CourseGuide.md) — краткий обзор всех возможностей
+- [CourseTechGuide.md](../CourseTechGuide.md) — краткий обзор всех возможностей
 - [Docs/Examples/quiz_single.md](Examples/quiz_single.md) — пример single-choice
 - [Docs/Examples/quiz_multiple_truefalse.md](Examples/quiz_multiple_truefalse.md) — примеры multiple и truefalse
 

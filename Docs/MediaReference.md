@@ -460,7 +460,7 @@ video1.mp4
 
 ## См. также
 
-- [CourseGuide.md](../CourseGuide.md) — краткий обзор всех возможностей
+- [CourseTechGuide.md](../CourseTechGuide.md) — краткий обзор всех возможностей
 - [Docs/Examples/media.md](Examples/media.md) — примеры локальных медиа
 - [Docs/Examples/mediaUrl.md](Examples/mediaUrl.md) — примеры внешних URL
 

@@ -46,8 +46,8 @@
 | `course1.json`, `course2.json` | Файлы структуры курсов (список уроков каждого курса) |
 | `lessons1/` | Уроки курса 1 |
 | `lessons2/` | Уроки курса 2 (модули m2, m3) |
-| `CourseStyleGuide.md` | Правила оформления и педагогический подход |
-| `CourseGuide.md` | Краткий обзор всех возможностей |
+| `LessonMethodGuide.md` | Правила оформления и педагогический подход |
+| `CourseTechGuide.md` | Краткий обзор всех возможностей |
 | `QuickStart.md` | Пошаговая инструкция для создания первого урока |
 | `Docs/` | Полная документация и справочники |
 | `Docs/Examples/` | Практические примеры всех фич |
@@ -93,8 +93,8 @@ rules:
 ## Документация
 
 - **[QuickStart.md](QuickStart.md)** — создайте первый урок за 5 минут
-- **[CourseGuide.md](CourseGuide.md)** — обзор всех возможностей
-- **[CourseStyleGuide.md](CourseStyleGuide.md)** — правила оформления уроков
+- **[CourseTechGuide.md](CourseTechGuide.md)** — обзор всех возможностей
+- **[LessonMethodGuide.md](LessonMethodGuide.md)** — правила оформления уроков
 - **[Docs/](Docs/)** — полная документация:
   - [CourseMarkdownSpec.md](Docs/CourseMarkdownSpec.md) — полная спецификация Markdown
   - [QuizReference.md](Docs/QuizReference.md) — справочник по тестам
@@ -133,4 +133,4 @@ rules:
 - **Теория + практика** — каждый концепт закрепляется упражнением
 - **Автоматическая проверка** — используйте check-блоки для заданий
 
-Подробнее в [CourseStyleGuide.md](CourseStyleGuide.md)
+Подробнее в [LessonMethodGuide.md](LessonMethodGuide.md)

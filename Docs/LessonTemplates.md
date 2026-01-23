@@ -14,7 +14,7 @@
 
 ## Полный урок: Теория → Практика → Перерыв → Теория → Практика → Итоги
 
-Стандартная структура согласно `CourseStyleGuide.md`. Используется для основных уроков курса.
+Стандартная структура согласно `LessonMethodGuide.md`. Используется для основных уроков курса.
 
 ```md
 # Модуль X, Урок Y: Название урока
@@ -774,8 +774,8 @@ rules:
 
 ## См. также
 
-- [CourseGuide.md](../CourseGuide.md) — обзор возможностей
-- [CourseStyleGuide.md](../CourseStyleGuide.md) — правила оформления
+- [CourseTechGuide.md](../CourseTechGuide.md) — обзор возможностей
+- [LessonMethodGuide.md](../LessonMethodGuide.md) — правила оформления
 - [QuickStart.md](../QuickStart.md) — создать первый урок
 - [Docs/Examples/full_lesson.md](Examples/full_lesson.md) — пример полного урока
 

@@ -645,8 +645,8 @@ rules:
 
 ## См. также
 
-- [CourseGuide.md](../CourseGuide.md) — краткий обзор всех возможностей
-- [CourseStyleGuide.md](../CourseStyleGuide.md) — правила создания заданий
+- [CourseTechGuide.md](../CourseTechGuide.md) — краткий обзор всех возможностей
+- [LessonMethodGuide.md](../LessonMethodGuide.md) — правила создания заданий
 - [Docs/Examples/check_block_scene.md](Examples/check_block_scene.md) — примеры проверок сцены
 - [Docs/Examples/check_block_script.md](Examples/check_block_script.md) — примеры проверок скриптов
 

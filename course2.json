@@ -8,6 +8,8 @@
     { "id": "l2m2y4", "title": "Методы и События", "file": "lessons2/m2/y4.md" },
     { "id": "l2m2y5", "title": "Жизненный цикл Unity + эффекты и звук", "file": "lessons2/m2/y5.md" },
     { "id": "l2m3y1", "title": "Условные операторы и логические выражения", "file": "lessons2/m3/y1.md" },
-    { "id": "l2m3y2", "title": "Циклы и повторяющиеся действия", "file": "lessons2/m3/y2.md" }
+    { "id": "l2m3y2", "title": "Условия else if + составные условия (Dino 3D)", "file": "lessons2/m3/y2.md" },
+    { "id": "l2m3y3", "title": "Циклы for/while (Dino 3D)", "file": "lessons2/m3/y3.md" },
+    { "id": "l2m3y4", "title": "Доработка Dino 3D: Game Over, Restart, UI", "file": "lessons2/m3/y4.md" }
   ]
 }
