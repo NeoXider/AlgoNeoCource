@@ -10,6 +10,11 @@
     { "id": "l2m3y1", "title": "l2 / m3 / Условные операторы и логические выражения", "file": "lessons2/m3/y1.md" },
     { "id": "l2m3y2", "title": "l2 / m3 / Условия else if + составные условия (Dino 3D)", "file": "lessons2/m3/y2.md" },
     { "id": "l2m3y3", "title": "l2 / m3 / Циклы for и while (Dino 3D)", "file": "lessons2/m3/y3.md" },
-    { "id": "l2m3y4", "title": "l2 / m3 / Доработка Dino 3D: Game Over, Restart, UI", "file": "lessons2/m3/y4.md" }
+    { "id": "l2m3y4", "title": "l2 / m3 / Доработка Dino 3D: Game Over, Restart, UI", "file": "lessons2/m3/y4.md" },
+    { "id": "l2m4y1", "title": "l2 / m4 / Поле, массив, клик", "file": "lessons2/m4/y1.md" },
+    { "id": "l2m4y2", "title": "l2 / m4 / Очередь хода и логика клетки", "file": "lessons2/m4/y2.md" },
+    { "id": "l2m4y3", "title": "l2 / m4 / List, foreach, победа и ничья", "file": "lessons2/m4/y3.md" },
+    { "id": "l2m4y4", "title": "l2 / m4 / Random.Range, бот, временный режим", "file": "lessons2/m4/y4.md" },
+    { "id": "l2m4y5", "title": "l2 / m4 / Статус, режимы, визуал, сборка", "file": "lessons2/m4/y5.md" }
   ]
 }
