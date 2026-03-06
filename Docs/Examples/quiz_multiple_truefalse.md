@@ -1,22 +1,17 @@
 # Пример Quiz — Multiple Choice и True/False
 
-Примеры тестов с несколькими правильными ответами и формата True/False, а также описание поведения.
+Примеры тестов с несколькими правильными ответами и формата `truefalse`.
 
 ## Общие правила
-- Блок `quiz` — fenced‑блок в Markdown. Поля: `id`, `kind`, `text`, `answers`.
-- Типы:
-  - `multiple` — можно выбрать несколько вариантов, затем нажать кнопку «Проверить».
-  - `truefalse` — быстрый вариант `single` с двумя ответами.
-- Поведение `multiple`:
-  - кликом выделяются варианты (класс `.quiz-answer--selected`),
-  - проверка — по кнопке «Проверить» под вариантами,
-  - правильные ответы подсвечиваются зелёным, неверно выбранные — красным.
-- Попытки и перемешивание — настраиваются в `Tools → AlgoNeoCourse → Settings → Open Quiz Settings`.
-- После каждого вопроса размещайте поясняющий слайд. [▶](unity://slide?dir=next)
 
-### Стили
-- Мини‑примеры fenced‑блоков с языком `truefalse` подсвечиваются стилем `.codeblock.language-truefalse`.
-- В UI заголовки вопросов переносятся по словам; правильные ответы выделяются зелёным, неверно выбранные — красным.
+- Блок `quiz` содержит `id`, `kind`, `text`, `answers`.
+- Для `multiple` пользователь выбирает несколько вариантов и нажимает `Проверить`.
+- Для `truefalse` поведение такое же, как у `single`, но с двумя ответами.
+- Попытки, перемешивание и защита навигации настраиваются в `Tools -> AlgoNeoCourse -> Settings -> Open Quiz Settings`.
+- Состояние квизов сохраняется локально автоматически.
+- После каждого вопроса лучше размещать поясняющий слайд. [▶](unity://slide?dir=next)
+
+## Пример `multiple`
 
 ```quiz
 id: mc-unity-components
@@ -30,6 +25,8 @@ answers:
   - text: AnimatorController
   - text: SceneManager
 ```
+
+## Пример `truefalse`
 
 ```quiz
 id: tf-update
@@ -45,7 +42,6 @@ answers:
 
 ## Пояснение (пример)
 
-- Components в Unity — это `Transform`, `Rigidbody`, `Collider`, и пр.
-- `AnimatorController` — это ассет‑контроллер для Animator, не компонент. (а Animator да компонент ^-^ )
-- `SceneManager` — статический API для управления сценами, не компонент.
-
+- Компоненты в Unity — это `Transform`, `Rigidbody`, `Collider` и другие типы `Component`.
+- `AnimatorController` — это ассет-контроллер, а не компонент.
+- `SceneManager` — статический API для управления сценами, а не компонент.

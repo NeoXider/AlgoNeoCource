@@ -1,136 +1,147 @@
-# AlgoNeoCource 
+# AlgoNeoCource
 
-**Версия:** 1.1  
-**Unity:** 6.2  
-**Репозиторий плагина:** [Neo-Cource-Unity](https://github.com/NeoXider/Neo-Cource-Unity)
+Материалы курсов для `AlgoNeoCourse`: JSON-описания курсов, Markdown-уроки, примеры, шаблоны и справочники для авторов контента.
 
-## О проекте
+## Что в репозитории
 
-Этот репозиторий содержит **исходные материалы курсов** для Unity-плагина интерактивного обучения. Все уроки написаны в формате Markdown и включают:
+Этот репозиторий хранит не сам Unity-плагин, а содержимое курсов:
 
-- Слайды с теорией и примерами кода
-- Интерактивные тесты (quiz)
-- Автоматические проверки заданий (check-блоки)
-- Медиа-контент (изображения, видео)
+- файлы структуры курсов: `course1.json`, `course2.json` и при необходимости другие `courseN.json`;
+- уроки в формате Markdown;
+- встроенные примеры `quiz`, `check`, медиа и ссылок `unity://`;
+- методические и технические гайды для авторов.
 
-Плагин загружает курсы прямо в редакторе Unity, обеспечивая интерактивное обучение с автоматической проверкой практических заданий.
+Плагин, который загружает эти материалы в Unity Editor, находится в отдельном репозитории: [Neo-Cource-Unity](https://github.com/NeoXider/Neo-Cource-Unity).
 
-## Быстрый старт
+## Установка плагина
 
-1. **Добавьте урок** в файл курса (например, `course2.json`):
+Рекомендуемый способ установки `AlgoNeoCourse` в Unity: через UPM по Git URL.
+
+1. Откройте `Window -> Package Manager`.
+2. Нажмите `+ -> Add package from git URL...`.
+3. Укажите:
+
+```text
+https://github.com/NeoXider/Neo-Cource-Unity.git?path=Assets/_AlgoNeoCourse
+```
+
+Альтернатива через `Packages/manifest.json`:
+
 ```json
-{ "id": "m2y1", "title": "Основы C#", "file": "lessons2/m2/y1.md" }
+{
+  "dependencies": {
+    "com.neoxider.algoneocourse": "https://github.com/NeoXider/Neo-Cource-Unity.git?path=Assets/_AlgoNeoCourse"
+  }
+}
 ```
 
-2. **Создайте файл** `lessons2/m2/y1.md` с базовой структурой:
-```md
-# Введение
-Текст первого слайда
+## Как подключить этот репозиторий как источник уроков
 
----
+После установки плагина:
 
-## Теория
-Основной контент
+1. Откройте `Tools -> AlgoNeoCourse -> Settings -> Open Course Settings`.
+2. Убедитесь, что `repositoryBaseUrl` указывает на raw-репозиторий курса.
+3. Выберите файл курса:
+   - `Course1` -> `course1.json`
+   - `Course2` -> `course2.json`
+   - `Custom` -> любой другой `courseN.json`
+4. Нажмите `Загрузить список уроков`.
+5. При необходимости скачайте выбранные уроки в локальную папку `Assets/_AlgoNeoCourse/Downloaded`.
+6. Откройте `Tools -> AlgoNeoCourse -> Open Course Window`.
+
+По умолчанию курс загружается из:
+
+```text
+https://raw.githubusercontent.com/NeoXider/AlgoNeoCource/main
 ```
 
-3. **Откройте в Unity**: `Tools → AlgoNeoCourse → Course Window`
+## Быстрый workflow автора курса
 
-4. **Протестируйте**: используйте горячие клавиши `Left/Right` для навигации
+- Добавьте запись в нужный файл курса, например в `course2.json`:
 
-Подробнее: [QuickStart.md](QuickStart.md)
-
-## Структура проекта
-
-| Файл/Папка | Описание |
-|------------|----------|
-| `course1.json`, `course2.json` | Файлы структуры курсов (список уроков каждого курса) |
-| `lessons1/` | Уроки курса 1 |
-| `lessons2/` | Уроки курса 2 (модули m2, m3) |
-| `LessonMethodGuide.md` | Правила оформления и педагогический подход |
-| `CourseTechGuide.md` | Краткий обзор всех возможностей |
-| `QuickStart.md` | Пошаговая инструкция для создания первого урока |
-| `Docs/` | Полная документация и справочники |
-| `Docs/Examples/` | Практические примеры всех фич |
-
-## Основные возможности
-
-### 📄 Слайды
-Уроки разделяются на слайды через `---`. Навигация встроена в плагин.
-
-### 🖼️ Медиа
-Поддержка изображений и видео (локальные файлы и URL):
-```md
-![](images/example.png)
-![](https://example.com/video.mp4)
+```json
+{ "id": "l2m2y6", "title": "Новый урок", "file": "lessons2/m2/y6.md" }
 ```
 
-### ❓ Интерактивные тесты
-Три типа вопросов: single-choice, multiple-choice, true/false
-````md
-```quiz
-id: q1
-kind: single
-text: Ваш вопрос?
-answers:
-  - text: Правильный ответ
-    correct: true
-  - text: Неправильный
-```
-````
+- Создайте соответствующий `.md` файл, например `lessons2/m2/y6.md`.
+- Разделите урок на слайды через `---`.
+- При необходимости добавьте:
+  - `quiz` для закрепления теории;
+  - `check` для автопроверки;
+  - изображения и видео;
+  - ссылки `unity://open` для быстрого открытия ассетов.
+- Откройте курс в Unity и проверьте урок в окне `AlgoNeoCourse`.
 
-### ✅ Автоматические проверки
-Проверка выполнения заданий в Unity:
-````md
-```check
-rules:
-  - object_exists: "Player"
-  - component_exists: { object: "Player", type: "Rigidbody" }
-  - filename: "PlayerController.cs"
-  - contains: "void Update()"
-```
-````
+Подробная пошаговая инструкция: [QuickStart.md](QuickStart.md)
+
+## Структура репозитория
+
+| Путь | Назначение |
+| --- | --- |
+| `course1.json`, `course2.json` | Описание курсов и список уроков |
+| `lessons1/`, `lessons2/` | Markdown-уроки по курсам |
+| `QuickStart.md` | Быстрый старт для авторов |
+| `CourseTechGuide.md` | Технический обзор формата уроков |
+| `LessonMethodGuide.md` | Методические рекомендации |
+| `Docs/` | Подробные справочники и шаблоны |
+| `Docs/Examples/` | Готовые рабочие примеры |
+
+## Что поддерживается
+
+### Слайды
+
+Слайды разделяются строкой `---`.
+
+### Медиа
+
+Поддерживаются:
+
+- локальные относительные пути;
+- проектные пути `Assets/...` и `Packages/...`;
+- внешние URL;
+- видео по прямой ссылке (`.mp4`, `.webm`, `.mov` и др.).
+
+### Квизы
+
+Поддерживаются три типа:
+
+- `single`
+- `multiple`
+- `truefalse`
+
+Прогресс квизов сохраняется локально в Unity-плагине автоматически, поэтому предыдущие уроки не нужно проходить заново после перезапуска Editor.
+
+### Проверки
+
+Поддерживаются `check`-блоки с правилами вроде:
+
+- `object_exists`
+- `component_exists`
+- `filename`
+- `contains`
+
+## Курсы в репозитории
+
+- `course1.json` -> `lessons1/`
+- `course2.json` -> `lessons2/`
+
+`course2.json` используется для второго курса, который уже разложен по модулям `m2`, `m3` и далее.
 
 ## Документация
 
-- **[QuickStart.md](QuickStart.md)** — создайте первый урок за 5 минут
-- **[CourseTechGuide.md](CourseTechGuide.md)** — обзор всех возможностей
-- **[LessonMethodGuide.md](LessonMethodGuide.md)** — правила оформления уроков
-- **[Docs/](Docs/)** — полная документация:
-  - [CourseMarkdownSpec.md](Docs/CourseMarkdownSpec.md) — полная спецификация Markdown
-  - [QuizReference.md](Docs/QuizReference.md) — справочник по тестам
-  - [CheckReference.md](Docs/CheckReference.md) — справочник по проверкам
-  - [MediaReference.md](Docs/MediaReference.md) — работа с медиа
-  - [LessonTemplates.md](Docs/LessonTemplates.md) — готовые шаблоны уроков
-  - [Examples/](Docs/Examples/) — практические примеры
+- [QuickStart.md](QuickStart.md) — первый урок за несколько минут
+- [CourseTechGuide.md](CourseTechGuide.md) — технический обзор формата
+- [LessonMethodGuide.md](LessonMethodGuide.md) — структура, педагогика и правила оформления
+- [Docs/README.md](Docs/README.md) — навигация по полной документации
+- [Docs/CourseMarkdownSpec.md](Docs/CourseMarkdownSpec.md) — спецификация формата Markdown
+- [Docs/QuizReference.md](Docs/QuizReference.md) — подробности по тестам
+- [Docs/CheckReference.md](Docs/CheckReference.md) — подробности по проверкам
+- [Docs/MediaReference.md](Docs/MediaReference.md) — изображения, видео и GIF
+- [Docs/LessonTemplates.md](Docs/LessonTemplates.md) — шаблоны уроков
+- [Docs/Examples/](Docs/Examples/) — рабочие примеры
 
-## Текущие курсы
+## Важно помнить
 
-Проект поддерживает несколько курсов одновременно. Каждый курс имеет свой JSON-файл конфигурации и папку с уроками:
-
-**Курс 1:** `course1.json` → `lessons1/`
-**Курс 2:** `course2.json` → `lessons2/` — Unity C# (2 год обучения)
-
-### Содержание курса 2
-
-Модули:
-- **Модуль 2:** Основы C# (синтаксис, переменные, операции, методы)
-- **Модуль 3:** Управляющие конструкции (условия, циклы)
-
-Полное содержание: [U2.md](U2.md)
-
-### Работа с несколькими курсами
-
-Для создания нового курса:
-1. Создайте файл `courseN.json` с описанием уроков
-2. Создайте папку `lessonsN/` для файлов уроков
-3. Загрузите нужный курс в Unity через плагин
-
-## Для разработчиков курсов
-
-При создании уроков следуйте принципам:
-- **SOLID и KISS** — простота и понятность
-- **Один слайд = одна мысль** — не перегружайте информацией
-- **Теория + практика** — каждый концепт закрепляется упражнением
-- **Автоматическая проверка** — используйте check-блоки для заданий
-
-Подробнее в [LessonMethodGuide.md](LessonMethodGuide.md)
+- Этот репозиторий отвечает за содержимое курсов, а не за код плагина.
+- Если меняется поведение окна курса, настроек, JSON-прогресса или GIF -> MP4, документацию здесь тоже нужно обновлять.
+- Для новых курсов удобно придерживаться схемы `courseN.json` + `lessonsN/`.

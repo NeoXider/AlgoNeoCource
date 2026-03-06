@@ -1,223 +1,116 @@
-# Документация курса — Оглавление
+# Документация AlgoNeoCource
 
-Полная документация по созданию интерактивных курсов для Unity.
+Навигационный файл по документации репозитория с материалами курсов для `AlgoNeoCourse`.
 
-## Быстрая навигация
+## С чего начать
 
-### Начало работы
+Если вы только подключились к проекту, идите в таком порядке:
 
-Если вы только начинаете, читайте в таком порядке:
+1. [../README.md](../README.md) — что хранится в репозитории и как подключить курс в Unity.
+2. [../QuickStart.md](../QuickStart.md) — как быстро добавить новый урок и увидеть его в редакторе.
+3. [../LessonMethodGuide.md](../LessonMethodGuide.md) — правила структуры, педагогики и практик.
+4. [CourseMarkdownSpec.md](CourseMarkdownSpec.md) — полная техническая спецификация формата.
 
-1. **[../QuickStart.md](../QuickStart.md)** — создайте первый урок за 5 минут
-2. **[../CourseTechGuide.md](../CourseTechGuide.md)** — обзор всех возможностей системы
-3. **[../LessonMethodGuide.md](../LessonMethodGuide.md)** — правила оформления и педагогический подход
-4. **[CourseMarkdownSpec.md](CourseMarkdownSpec.md)** — полная спецификация формата Markdown
+## Основные документы
 
-### Справочники (Reference)
+### Базовые гайды
 
-Подробные руководства по отдельным функциям:
+- [../README.md](../README.md) — обзор репозитория курсов
+- [../QuickStart.md](../QuickStart.md) — быстрый старт
+- [../CourseTechGuide.md](../CourseTechGuide.md) — технический обзор всех возможностей
+- [../LessonMethodGuide.md](../LessonMethodGuide.md) — методические правила
 
-- **[QuizReference.md](QuizReference.md)** — всё про интерактивные тесты (quiz)
-- **[CheckReference.md](CheckReference.md)** — всё про автоматические проверки (check)
-- **[MediaReference.md](MediaReference.md)** — работа с изображениями и видео
+### Справочники
 
-### Шаблоны
+- [CourseMarkdownSpec.md](CourseMarkdownSpec.md) — формат уроков и файла курса
+- [QuizReference.md](QuizReference.md) — всё про `quiz`
+- [CheckReference.md](CheckReference.md) — всё про `check`
+- [MediaReference.md](MediaReference.md) — картинки, видео, GIF и пути
 
-- **[LessonTemplates.md](LessonTemplates.md)** — готовые шаблоны уроков для копирования
+### Шаблоны и примеры
 
-### Примеры (Examples)
+- [LessonTemplates.md](LessonTemplates.md) — шаблоны уроков
+- [Examples/full_lesson.md](Examples/full_lesson.md) — полный пример урока
+- [Examples/quiz_single.md](Examples/quiz_single.md) — single-choice
+- [Examples/quiz_multiple_truefalse.md](Examples/quiz_multiple_truefalse.md) — multiple и true/false
+- [Examples/media.md](Examples/media.md) — локальные медиа
+- [Examples/mediaUrl.md](Examples/mediaUrl.md) — внешние URL
+- [Examples/open_asset.md](Examples/open_asset.md) — `unity://open`
+- [Examples/check_block_scene.md](Examples/check_block_scene.md) — проверка объектов сцены
+- [Examples/check_block_script.md](Examples/check_block_script.md) — проверка скриптов
+- [Examples/check_block_debug.md](Examples/check_block_debug.md) — debug-показ проверок
 
-Практические примеры всех возможностей:
+## Что где описано
 
-- **[Examples/full_lesson.md](Examples/full_lesson.md)** — полный пример урока со всеми элементами
-- **[Examples/quiz_single.md](Examples/quiz_single.md)** — примеры single-choice тестов
-- **[Examples/quiz_multiple_truefalse.md](Examples/quiz_multiple_truefalse.md)** — примеры multiple и true/false
-- **[Examples/media.md](Examples/media.md)** — примеры локальных медиа
-- **[Examples/mediaUrl.md](Examples/mediaUrl.md)** — примеры внешних URL
-- **[Examples/check_block_scene.md](Examples/check_block_scene.md)** — проверка объектов сцены
-- **[Examples/check_block_script.md](Examples/check_block_script.md)** — проверка скриптов
-- **[Examples/check_block_debug.md](Examples/check_block_debug.md)** — дебаг-режим проверок
-- **[Examples/open_asset.md](Examples/open_asset.md)** — открытие ассетов через ссылки
+| Документ | Когда читать |
+| --- | --- |
+| `QuickStart.md` | Когда нужно быстро добавить новый урок |
+| `LessonMethodGuide.md` | Когда важно выдержать структуру и методику |
+| `CourseTechGuide.md` | Когда нужен обзор возможностей без глубокой детализации |
+| `CourseMarkdownSpec.md` | Когда нужен точный синтаксис и ограничения |
+| `QuizReference.md` | Когда добавляете тесты |
+| `CheckReference.md` | Когда добавляете практические задания с автопроверкой |
+| `MediaReference.md` | Когда работаете с картинками, видео и GIF |
+| `LessonTemplates.md` | Когда нужен каркас для нового урока |
 
-## Описание файлов
+## Ключевые факты проекта
 
-### CourseMarkdownSpec.md
-**Полная спецификация Markdown-формата**
+- Один курс описывается отдельным JSON-файлом: `course1.json`, `course2.json` или любым `courseN.json`.
+- Один урок — это один `.md` файл, указанный в поле `file`.
+- Плагин устанавливается через UPM из репозитория [Neo-Cource-Unity](https://github.com/NeoXider/Neo-Cource-Unity).
+- В Unity курс открывается через `Tools -> AlgoNeoCourse -> Open Course Window`.
+- Источник материалов настраивается в `Tools -> AlgoNeoCourse -> Settings -> Open Course Settings`.
+- Прогресс квизов и позиция курса сохраняются локально в Unity-плагине автоматически.
 
-Что внутри:
-- Описание уроков в `course.json`
-- Создание `.md` файлов уроков
-- Разделение на слайды
-- Медиа (изображения/видео)
-- Проверки и действия (`unity://` ссылки)
-- Квизы (интерактивные тесты)
-- Метаданные урока
-- Каркасы и шаблоны
-- Чек-лист перед публикацией
+## Структура репозитория
 
-**Кому:** Для углубленного понимания формата и всех технических деталей.
-
-### QuizReference.md
-**Справочник по интерактивным тестам**
-
-Что внутри:
-- Три типа квизов: single, multiple, truefalse
-- Полный синтаксис YAML
-- Настройки в Quiz Settings
-- Поведение и UX каждого типа
-- Персистенция и сохранение прогресса
-- Примеры всех типов
-- Рекомендации по созданию вопросов
-- Шаблоны для копирования
-- Отладка
-
-**Кому:** Для тех, кто создаёт тесты и хочет понять все нюансы поведения.
-
-### CheckReference.md
-**Справочник по автоматическим проверкам**
-
-Что внутри:
-- Все типы правил проверки
-- Синтаксис YAML
-- `object_exists`, `component_exists`, `filename`, `contains`
-- Комбинированные проверки (сцена + скрипт)
-- Примеры для типичных задач
-- Рекомендации по гибкости проверок
-- Шаблоны для копирования
-- Отладка и частые проблемы
-
-**Кому:** Для тех, кто создаёт практические задания с автоматической проверкой.
-
-### MediaReference.md
-**Справочник по работе с медиа**
-
-Что внутри:
-- Поддерживаемые форматы изображений и видео
-- Способы указания путей (относительные, абсолютные, URL, проектные)
-- Особенности GIF и конвертация в MP4
-- Организация файлов медиа
-- Оптимизация размеров
-- Примеры всех вариантов путей
-- Отладка проблем с загрузкой
-
-**Кому:** Для тех, кто работает с изображениями и видео в уроках.
-
-### LessonTemplates.md
-**Готовые шаблоны уроков**
-
-Что внутри:
-- Шаблон полного урока (Теория → Практика → Перерыв → Теория → Практика → Итоги)
-- Шаблон короткого урока
-- Шаблон концепт + тест
-- Шаблоны отдельных слайдов (теория, задание, лайфхак, итоги)
-- Шаблоны блоков (quiz, check)
-- Специальные шаблоны (введение, практикум)
-- Рекомендации по выбору и адаптации
-
-**Кому:** Для быстрого старта — копируйте и адаптируйте под свои нужды.
-
-## Структура документации
-
-```
+```text
 AlgoNeoCource/
-├── README.md                    # Обзор проекта, ссылки на документацию
-├── QuickStart.md                # Быстрый старт за 5 минут
-├── CourseTechGuide.md           # Краткий обзор возможностей
-├── LessonMethodGuide.md         # Правила оформления и педагогика
-│
-├── course1.json                 # Структура курса 1
-├── course2.json                 # Структура курса 2
-│
-├── lessons1/                    # Уроки курса 1
-│   └── m2/
-│       └── y1.md
-│
-├── lessons2/                    # Уроки курса 2
-│   ├── m2/                      # Модуль 2
-│   │   ├── y1.md               # Урок 1
-│   │   ├── y2.md               # Урок 2
-│   │   └── images/             # Медиа для модуля 2
-│   └── m3/                      # Модуль 3
-│
-└── Docs/                        # Полная документация
-    ├── README.md               # Этот файл - навигация
-    ├── CourseMarkdownSpec.md   # Полная спецификация
-    ├── QuizReference.md        # Справочник по квизам
-    ├── CheckReference.md       # Справочник по проверкам
-    ├── MediaReference.md       # Справочник по медиа
-    ├── LessonTemplates.md      # Шаблоны уроков
-    │
-    └── Examples/               # Практические примеры
-        ├── full_lesson.md
-        ├── quiz_single.md
-        ├── quiz_multiple_truefalse.md
-        ├── check_block_scene.md
-        ├── check_block_script.md
-        ├── media.md
-        └── ...
+├── README.md
+├── QuickStart.md
+├── CourseTechGuide.md
+├── LessonMethodGuide.md
+├── course1.json
+├── course2.json
+├── lessons1/
+├── lessons2/
+└── Docs/
+    ├── README.md
+    ├── CourseMarkdownSpec.md
+    ├── QuizReference.md
+    ├── CheckReference.md
+    ├── MediaReference.md
+    ├── LessonTemplates.md
+    └── Examples/
 ```
 
-## Рекомендуемый путь обучения
+## Рекомендуемый маршрут для автора
 
-### Уровень 1: Новичок (15-20 минут)
-1. Прочитайте [../README.md](../README.md) — обзор проекта
-2. Следуйте [../QuickStart.md](../QuickStart.md) — создайте первый урок
-3. Просмотрите [Examples/full_lesson.md](Examples/full_lesson.md) — увидьте полный пример
+### Быстрый старт
 
-**Результат:** Вы сможете создать базовый урок с текстом и слайдами.
+1. Добавьте запись в `course1.json` или `course2.json`.
+2. Создайте `.md` файл урока.
+3. Проверьте урок через `AlgoNeoCourse` в Unity.
 
-### Уровень 2: Базовый (30-40 минут)
-1. Прочитайте [../CourseTechGuide.md](../CourseTechGuide.md) — все возможности
-2. Изучите [LessonTemplates.md](LessonTemplates.md) — готовые шаблоны
-3. Прочитайте [../LessonMethodGuide.md](../LessonMethodGuide.md) — правила оформления
-4. Попробуйте примеры из [Examples/](Examples/)
+### Нормальный рабочий цикл
 
-**Результат:** Вы сможете создавать уроки с медиа, тестами и проверками.
-
-### Уровень 3: Продвинутый (1-2 часа)
-1. Изучите [QuizReference.md](QuizReference.md) — все про тесты
-2. Изучите [CheckReference.md](CheckReference.md) — все про проверки
-3. Изучите [MediaReference.md](MediaReference.md) — все про медиа
-4. Прочитайте [CourseMarkdownSpec.md](CourseMarkdownSpec.md) — полную спецификацию
-
-**Результат:** Вы будете знать все нюансы и сможете решать сложные задачи.
-
-## Частые вопросы
-
-### Как создать первый урок?
-→ [../QuickStart.md](../QuickStart.md)
-
-### Какие типы тестов поддерживаются?
-→ [QuizReference.md](QuizReference.md) — single, multiple, truefalse
-
-### Как проверить, что студент выполнил задание?
-→ [CheckReference.md](CheckReference.md) — блоки `check`
-
-### Как вставить изображение или видео?
-→ [MediaReference.md](MediaReference.md) — все способы
-
-### Где взять готовый шаблон урока?
-→ [LessonTemplates.md](LessonTemplates.md) — копируйте и адаптируйте
-
-### Как правильно оформить урок?
-→ [../LessonMethodGuide.md](../LessonMethodGuide.md) — правила и педагогика
-
-### Где посмотреть примеры?
-→ [Examples/](Examples/) — практические примеры всех фич
+1. Сверьтесь с [LessonMethodGuide.md](../LessonMethodGuide.md).
+2. Соберите каркас урока по [LessonTemplates.md](LessonTemplates.md).
+3. Проверьте синтаксис по [CourseMarkdownSpec.md](CourseMarkdownSpec.md).
+4. Для интерактива используйте:
+   - [QuizReference.md](QuizReference.md)
+   - [CheckReference.md](CheckReference.md)
+   - [MediaReference.md](MediaReference.md)
 
 ## Полезные ссылки
 
-- **Репозиторий плагина:** [Neo-Cource-Unity](https://github.com/NeoXider/Neo-Cource-Unity)
-- **Unity версия:** 6.2
-- **Формат уроков:** Markdown (.md)
-- **Конфигурация:** course.json
+- Репозиторий плагина: [Neo-Cource-Unity](https://github.com/NeoXider/Neo-Cource-Unity)
+- UPM Git URL плагина:
 
-## Обратная связь
+```text
+https://github.com/NeoXider/Neo-Cource-Unity.git?path=Assets/_AlgoNeoCourse
+```
 
-Если нашли ошибку в документации или есть предложения по улучшению, создайте issue в репозитории плагина или свяжитесь с командой разработки.
+## Версия документации
 
----
-
-**Версия документации:** 1.1  
-**Последнее обновление:** 2025-01-27
-
+- Совместимо с актуальным плагином `AlgoNeoCourse 1.4.x`
