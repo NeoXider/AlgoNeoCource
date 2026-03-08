@@ -15,6 +15,16 @@
     { "id": "l2m4y2", "title": "l2 / m4 / Очередь хода и логика клетки", "file": "lessons2/m4/y2.md" },
     { "id": "l2m4y3", "title": "l2 / m4 / List, foreach, победа и ничья", "file": "lessons2/m4/y3.md" },
     { "id": "l2m4y4", "title": "l2 / m4 / Random.Range, бот, временный режим", "file": "lessons2/m4/y4.md" },
-    { "id": "l2m4y5", "title": "l2 / m4 / Статус, режимы, визуал, сборка", "file": "lessons2/m4/y5.md" }
+    { "id": "l2m4y5", "title": "l2 / m4 / Статус, режимы, визуал, сборка", "file": "lessons2/m4/y5.md" },
+    { "id": "l2m5y1", "title": "l2 / m5 / Введение в ООП, Tower Defence, первый выстрел", "file": "lessons2/m5/y1.md" },
+    { "id": "l2m5y2", "title": "l2 / m5 / Классы и объекты, здоровье и урон", "file": "lessons2/m5/y2.md" },
+    { "id": "l2m5y3", "title": "l2 / m5 / Методы и return", "file": "lessons2/m5/y3.md" },
+    { "id": "l2m5y4", "title": "l2 / m5 / GameManager и улучшения", "file": "lessons2/m5/y4.md" },
+    { "id": "l2m5y5", "title": "l2 / m5 / Волны врагов", "file": "lessons2/m5/y5.md" },
+    { "id": "l2m5y6", "title": "l2 / m5 / Доработка и билд", "file": "lessons2/m5/y6.md" },
+    { "id": "l2m6y1", "title": "l2 / m6 / Управление и выстрел", "file": "lessons2/m6/y1.md" },
+    { "id": "l2m6y2", "title": "l2 / m6 / Invoke и спавнеры", "file": "lessons2/m6/y2.md" },
+    { "id": "l2m6y3", "title": "l2 / m6 / GameManager и очки", "file": "lessons2/m6/y3.md" },
+    { "id": "l2m6y4", "title": "l2 / m6 / Доработка и билд", "file": "lessons2/m6/y4.md" }
   ]
 }
