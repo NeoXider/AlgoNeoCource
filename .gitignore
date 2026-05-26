@@ -1,4 +1,8 @@
 # Environment variables
 .env
 
-# Ignore all text files...
+# Local agent/course review notes
+Docs/AgentCourseReviewMemory.md
+
+# Local Kilo/Codex tooling cache
+.kilo/
