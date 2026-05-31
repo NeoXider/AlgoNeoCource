@@ -41,6 +41,7 @@ namespace Lessons.M6.Y4
             }
 
             IsGameOver = true;
+            CancelInvoke(nameof(IncreaseDifficulty));
             gameOverPanel.SetActive(true);
         }
 
