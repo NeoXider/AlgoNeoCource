@@ -52,10 +52,7 @@ namespace Lessons.M2.Y5
 
         private void UpdateScoreText()
         {
-            if (textScore != null)
-            {
-                textScore.text = ((int)score).ToString();
-            }
+            textScore.text = ((int)score).ToString();
         }
 
         private void UpgradeClickPower(int bonus)
@@ -66,17 +63,11 @@ namespace Lessons.M2.Y5
 
         private void PlayClickFeedback()
         {
-            if (clickAudioSource != null && clickClip != null)
-            {
-                clickAudioSource.PlayOneShot(clickClip);
-            }
+            clickAudioSource.PlayOneShot(clickClip);
 
-            if (clickFxPrefab != null)
-            {
-                ParticleSystem fx = Instantiate(clickFxPrefab, transform.position, Quaternion.identity);
-                fx.Play();
-                Destroy(fx.gameObject, 1f);
-            }
+            ParticleSystem fx = Instantiate(clickFxPrefab, transform.position, Quaternion.identity);
+            fx.Play();
+            Destroy(fx.gameObject, 1f);
         }
     }
 }

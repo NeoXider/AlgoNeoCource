@@ -14,10 +14,7 @@ namespace Lessons.M3.Y4
 
         private void Start()
         {
-            if (gameOverPanel != null)
-            {
-                gameOverPanel.SetActive(false);
-            }
+            gameOverPanel.SetActive(false);
         }
 
         private void Update()
@@ -28,19 +25,13 @@ namespace Lessons.M3.Y4
             }
 
             score += Time.deltaTime;
-            if (scoreText != null)
-            {
-                scoreText.text = ((int)score).ToString();
-            }
+            scoreText.text = ((int)score).ToString();
         }
 
         public void GameOver()
         {
             isGameOver = true;
-            if (gameOverPanel != null)
-            {
-                gameOverPanel.SetActive(true);
-            }
+            gameOverPanel.SetActive(true);
         }
 
         public void Restart()

@@ -22,11 +22,7 @@ namespace Lessons.M4.Y5
 
         public void StartNewMatch()
         {
-            if (ui != null)
-            {
-                ui.ShowGamePanel();
-            }
-
+            ui.ShowGamePanel();
             PrepareBoardCells();
             ResetBoard();
             UpdateStatusText();
@@ -46,10 +42,7 @@ namespace Lessons.M4.Y5
 
         public void ShowModeSelection()
         {
-            if (ui != null)
-            {
-                ui.ShowModeSelection();
-            }
+            ui.ShowModeSelection();
         }
 
         public void PrepareBoardCells()
@@ -124,11 +117,6 @@ namespace Lessons.M4.Y5
 
         public void MakeBotMove()
         {
-            if (bot == null)
-            {
-                return;
-            }
-
             int botMove = bot.ChooseMove(board);
 
             if (botMove >= 0)
@@ -139,7 +127,7 @@ namespace Lessons.M4.Y5
 
         public void UpdateStatusText()
         {
-            if (ui == null || isGameOver)
+            if (isGameOver)
             {
                 return;
             }
@@ -201,29 +189,14 @@ namespace Lessons.M4.Y5
             SetBoardInteractable(false);
 
             string symbol = winner == 1 ? xSymbol : oSymbol;
-            if (ui != null)
-            {
-                ui.SetStatusText("Победил: " + symbol);
-            }
-            else
-            {
-                Debug.Log("Победил: " + symbol);
-            }
+            ui.SetStatusText("Победил: " + symbol);
         }
 
         public void FinishGameWithDraw()
         {
             isGameOver = true;
             SetBoardInteractable(false);
-
-            if (ui != null)
-            {
-                ui.SetStatusText("Ничья!");
-            }
-            else
-            {
-                Debug.Log("Ничья!");
-            }
+            ui.SetStatusText("Ничья!");
         }
 
         public void SetBoardInteractable(bool isInteractable)
@@ -236,7 +209,14 @@ namespace Lessons.M4.Y5
 
         public void SwitchPlayer()
         {
-            currentPlayer = currentPlayer == 1 ? 2 : 1;
+            if (currentPlayer == 1)
+            {
+                currentPlayer = 2;
+            }
+            else
+            {
+                currentPlayer = 1;
+            }
         }
 
         public void UpdateCell(int cellIndex)

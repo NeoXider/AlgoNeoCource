@@ -11,26 +11,17 @@ namespace Lessons.M2.Y5
 
         private void Start()
         {
-            if (triggerButton != null)
-            {
-                triggerButton.onClick.AddListener(ChangeSprite);
-            }
+            triggerButton.onClick.AddListener(ChangeSprite);
         }
 
         public void ChangeSprite()
         {
-            if (targetRenderer != null && newSprite != null)
-            {
-                targetRenderer.sprite = newSprite;
-            }
+            targetRenderer.sprite = newSprite;
         }
 
         private void OnDestroy()
         {
-            if (triggerButton != null)
-            {
-                triggerButton.onClick.RemoveListener(ChangeSprite);
-            }
+            triggerButton.onClick.RemoveListener(ChangeSprite);
         }
     }
 }

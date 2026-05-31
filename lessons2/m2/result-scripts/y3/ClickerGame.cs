@@ -34,10 +34,7 @@ namespace Lessons.M2.Y3
 
         private void UpdateScoreText()
         {
-            if (textScore != null)
-            {
-                textScore.text = ((int)score).ToString();
-            }
+            textScore.text = ((int)score).ToString();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Lessons.M3.Y4
 
         private void Update()
         {
-            if (gameController != null && gameController.isGameOver)
+            if (gameController.isGameOver)
             {
                 return;
             }

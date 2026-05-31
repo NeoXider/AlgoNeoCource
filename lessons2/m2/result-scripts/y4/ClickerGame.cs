@@ -43,10 +43,7 @@ namespace Lessons.M2.Y4
 
         private void UpdateScoreText()
         {
-            if (textScore != null)
-            {
-                textScore.text = ((int)score).ToString();
-            }
+            textScore.text = ((int)score).ToString();
         }
 
         private void UpgradeClickPower(int bonus)

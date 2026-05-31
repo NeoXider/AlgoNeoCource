@@ -11,10 +11,7 @@ namespace Lessons.M3.Y3
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<DinoController>() != null)
-            {
-                Debug.Log("Столкновение с препятствием!");
-            }
+            Debug.Log("Столкновение с препятствием!");
         }
     }
 }

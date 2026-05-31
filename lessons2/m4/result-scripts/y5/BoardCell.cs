@@ -13,20 +13,14 @@ namespace Lessons.M4.Y5
 
         public void Awake()
         {
-            EnsureReferences();
-
-            if (button != null)
-            {
-                button.onClick.AddListener(OnCellClicked);
-            }
+            button = GetComponent<Button>();
+            symbolText = GetComponentInChildren<TMP_Text>();
+            button.onClick.AddListener(OnCellClicked);
         }
 
         public void OnDestroy()
         {
-            if (button != null)
-            {
-                button.onClick.RemoveListener(OnCellClicked);
-            }
+            button.onClick.RemoveListener(OnCellClicked);
         }
 
         public void Setup(TicTacToeGame ticTacToeGame, int newCellIndex)
@@ -37,55 +31,23 @@ namespace Lessons.M4.Y5
 
         public void SetSymbol(string symbol)
         {
-            EnsureReferences();
-
-            if (symbolText != null)
-            {
-                symbolText.text = symbol;
-            }
+            symbolText.text = symbol;
         }
 
         public void SetInteractable(bool isInteractable)
         {
-            EnsureReferences();
-
-            if (button != null)
-            {
-                button.interactable = isInteractable;
-            }
+            button.interactable = isInteractable;
         }
 
         public void ClearCell()
         {
-            EnsureReferences();
-
-            if (symbolText != null)
-            {
-                symbolText.text = string.Empty;
-            }
-
+            symbolText.text = string.Empty;
             SetInteractable(true);
         }
 
         public void OnCellClicked()
         {
-            if (game != null)
-            {
-                game.HandleCellClicked(cellIndex);
-            }
-        }
-
-        private void EnsureReferences()
-        {
-            if (button == null)
-            {
-                button = GetComponent<Button>();
-            }
-
-            if (symbolText == null)
-            {
-                symbolText = GetComponentInChildren<TMP_Text>();
-            }
+            game.HandleCellClicked(cellIndex);
         }
     }
 }

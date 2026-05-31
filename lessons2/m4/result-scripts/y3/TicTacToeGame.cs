@@ -145,7 +145,14 @@ namespace Lessons.M4.Y3
 
         public void SwitchPlayer()
         {
-            currentPlayer = currentPlayer == 1 ? 2 : 1;
+            if (currentPlayer == 1)
+            {
+                currentPlayer = 2;
+            }
+            else
+            {
+                currentPlayer = 1;
+            }
         }
 
         public void UpdateCell(int cellIndex)

@@ -91,11 +91,6 @@ namespace Lessons.M4.Y4
 
         public void MakeBotMove()
         {
-            if (bot == null)
-            {
-                return;
-            }
-
             int botMove = bot.ChooseMove(board);
 
             if (botMove >= 0)
@@ -165,7 +160,14 @@ namespace Lessons.M4.Y4
 
         public void SwitchPlayer()
         {
-            currentPlayer = currentPlayer == 1 ? 2 : 1;
+            if (currentPlayer == 1)
+            {
+                currentPlayer = 2;
+            }
+            else
+            {
+                currentPlayer = 1;
+            }
         }
 
         public void UpdateCell(int cellIndex)

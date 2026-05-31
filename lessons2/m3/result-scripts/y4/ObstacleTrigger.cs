@@ -11,16 +11,8 @@ namespace Lessons.M3.Y4
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<DinoController>() == null)
-            {
-                return;
-            }
-
             GameController gameController = FindFirstObjectByType<GameController>();
-            if (gameController != null)
-            {
-                gameController.GameOver();
-            }
+            gameController.GameOver();
         }
     }
 }

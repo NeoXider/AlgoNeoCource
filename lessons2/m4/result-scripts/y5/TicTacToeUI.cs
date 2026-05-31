@@ -15,15 +15,8 @@ namespace Lessons.M4.Y5
 
         public void Awake()
         {
-            if (twoPlayersButton != null)
-            {
-                twoPlayersButton.onClick.AddListener(OnTwoPlayersClicked);
-            }
-
-            if (botButton != null)
-            {
-                botButton.onClick.AddListener(OnBotClicked);
-            }
+            twoPlayersButton.onClick.AddListener(OnTwoPlayersClicked);
+            botButton.onClick.AddListener(OnBotClicked);
         }
 
         public void Start()
@@ -33,65 +26,35 @@ namespace Lessons.M4.Y5
 
         public void OnDestroy()
         {
-            if (twoPlayersButton != null)
-            {
-                twoPlayersButton.onClick.RemoveListener(OnTwoPlayersClicked);
-            }
-
-            if (botButton != null)
-            {
-                botButton.onClick.RemoveListener(OnBotClicked);
-            }
+            twoPlayersButton.onClick.RemoveListener(OnTwoPlayersClicked);
+            botButton.onClick.RemoveListener(OnBotClicked);
         }
 
         public void ShowModeSelection()
         {
-            if (modePanel != null)
-            {
-                modePanel.SetActive(true);
-            }
-
-            if (gamePanel != null)
-            {
-                gamePanel.SetActive(false);
-            }
+            modePanel.SetActive(true);
+            gamePanel.SetActive(false);
         }
 
         public void ShowGamePanel()
         {
-            if (modePanel != null)
-            {
-                modePanel.SetActive(false);
-            }
-
-            if (gamePanel != null)
-            {
-                gamePanel.SetActive(true);
-            }
+            modePanel.SetActive(false);
+            gamePanel.SetActive(true);
         }
 
         public void SetStatusText(string text)
         {
-            if (statusText != null)
-            {
-                statusText.text = text;
-            }
+            statusText.text = text;
         }
 
         public void OnTwoPlayersClicked()
         {
-            if (game != null)
-            {
-                game.StartTwoPlayersGame();
-            }
+            game.StartTwoPlayersGame();
         }
 
         public void OnBotClicked()
         {
-            if (game != null)
-            {
-                game.StartBotGame();
-            }
+            game.StartBotGame();
         }
     }
 }

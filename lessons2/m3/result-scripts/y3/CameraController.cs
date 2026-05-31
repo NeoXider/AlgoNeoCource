@@ -9,11 +9,6 @@ namespace Lessons.M3.Y3
 
         private void LateUpdate()
         {
-            if (target == null)
-            {
-                return;
-            }
-
             Vector3 pos = transform.position;
             pos.x = target.position.x + offset.x;
             transform.position = pos;

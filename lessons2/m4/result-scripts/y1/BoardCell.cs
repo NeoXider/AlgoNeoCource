@@ -15,19 +15,12 @@ namespace Lessons.M4.Y1
         {
             button = GetComponent<Button>();
             symbolText = GetComponentInChildren<TMP_Text>();
-
-            if (button != null)
-            {
-                button.onClick.AddListener(OnCellClicked);
-            }
+            button.onClick.AddListener(OnCellClicked);
         }
 
         public void OnDestroy()
         {
-            if (button != null)
-            {
-                button.onClick.RemoveListener(OnCellClicked);
-            }
+            button.onClick.RemoveListener(OnCellClicked);
         }
 
         public void Setup(TicTacToeGame ticTacToeGame, int newCellIndex)
@@ -38,18 +31,12 @@ namespace Lessons.M4.Y1
 
         public void SetSymbol(string symbol)
         {
-            if (symbolText != null)
-            {
-                symbolText.text = symbol;
-            }
+            symbolText.text = symbol;
         }
 
         public void OnCellClicked()
         {
-            if (game != null)
-            {
-                game.HandleCellClicked(cellIndex);
-            }
+            game.HandleCellClicked(cellIndex);
         }
     }
 }
