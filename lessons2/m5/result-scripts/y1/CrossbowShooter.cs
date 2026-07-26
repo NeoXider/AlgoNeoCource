@@ -12,6 +12,8 @@ namespace Lessons.M5.Y1
 
         void Update()
         {
+            AimAtMouse();
+
             if (Input.GetMouseButton(0) && Time.time >= nextShootTime)
             {
                 Shoot();
@@ -19,9 +21,17 @@ namespace Lessons.M5.Y1
             }
         }
 
+        private void AimAtMouse()
+        {
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 aimDirection = mousePosition - transform.position;
+            float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        }
+
         public void Shoot()
         {
-            Instantiate(boltPrefab, shootPoint.position, Quaternion.identity);
+            Instantiate(boltPrefab, shootPoint.position, transform.rotation);
         }
     }
 }

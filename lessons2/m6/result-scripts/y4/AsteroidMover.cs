@@ -7,6 +7,7 @@ namespace Lessons.M6.Y4
         [SerializeField] private float baseSpeed = 3f;
         [SerializeField] private float destroyY = -6f;
         [SerializeField] private int scoreValue = 10;
+        [SerializeField] private GameObject explosionPrefab;
 
         public GameManager gameManager;
 
@@ -30,6 +31,7 @@ namespace Lessons.M6.Y4
                     gameManager.AddScore(scoreValue);
                 }
 
+                SpawnExplosion();
                 Destroy(other.gameObject);
                 Destroy(gameObject);
                 return;
@@ -43,6 +45,15 @@ namespace Lessons.M6.Y4
                 }
 
                 Destroy(gameObject);
+            }
+        }
+
+        // Создаёт эффект взрыва на месте астероида
+        private void SpawnExplosion()
+        {
+            if (explosionPrefab != null)
+            {
+                Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             }
         }
     }

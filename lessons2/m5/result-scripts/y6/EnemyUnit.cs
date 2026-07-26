@@ -8,6 +8,7 @@ namespace Lessons.M5.Y6
         public float moveSpeed = 2f;
         public GameManager gameManager;
         public int reward = 3;
+        public GameObject deathEffectPrefab;
 
         private int currentHealth;
 
@@ -18,7 +19,7 @@ namespace Lessons.M5.Y6
 
         void Update()
         {
-            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime, Space.World);
         }
 
         public bool IsAlive()
@@ -29,7 +30,6 @@ namespace Lessons.M5.Y6
         public void TakeDamage(int damage)
         {
             currentHealth -= damage;
-
             if (!IsAlive())
             {
                 Die();
@@ -51,6 +51,11 @@ namespace Lessons.M5.Y6
 
         private void Die()
         {
+            if (deathEffectPrefab != null)
+            {
+                Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+            }
+
             if (gameManager != null)
             {
                 gameManager.AddCurrency(reward);

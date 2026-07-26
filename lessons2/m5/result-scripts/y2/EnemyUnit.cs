@@ -16,7 +16,7 @@ namespace Lessons.M5.Y2
 
         void Update()
         {
-            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime, Space.World);
         }
 
         public void TakeDamage(int damage)

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Lessons.M6.Y4
 {
@@ -43,6 +44,12 @@ namespace Lessons.M6.Y4
             IsGameOver = true;
             CancelInvoke(nameof(IncreaseDifficulty));
             gameOverPanel.SetActive(true);
+        }
+
+        // Перезапускает текущую сцену: игра начинается заново
+        public void RestartGame()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         private void IncreaseDifficulty()
