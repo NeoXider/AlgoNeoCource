@@ -13,6 +13,13 @@ namespace Lessons.M6.Y4
 
         void Update()
         {
+            // После проигрыша астероид замирает
+            if (gameManager != null && gameManager.IsGameOver)
+            {
+                return;
+            }
+
+            // Если менеджера нет, множитель обычный — 1
             float multiplier = gameManager != null ? gameManager.SpeedMultiplier : 1f;
             transform.position += Vector3.down * baseSpeed * multiplier * Time.deltaTime;
 
@@ -44,6 +51,7 @@ namespace Lessons.M6.Y4
                     gameManager.FinishGame();
                 }
 
+                SpawnExplosion();
                 Destroy(gameObject);
             }
         }

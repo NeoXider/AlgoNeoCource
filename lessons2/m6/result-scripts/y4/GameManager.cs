@@ -6,7 +6,9 @@ namespace Lessons.M6.Y4
 {
     public class GameManager : MonoBehaviour
     {
+        [Header("Настройки")]
         [SerializeField] private TMP_Text scoreText;
+        [SerializeField] private TMP_Text finalScoreText;
         [SerializeField] private GameObject gameOverPanel;
         [SerializeField] private float difficultyDelay = 10f;
         [SerializeField] private float difficultyInterval = 10f;
@@ -43,6 +45,7 @@ namespace Lessons.M6.Y4
 
             IsGameOver = true;
             CancelInvoke(nameof(IncreaseDifficulty));
+            finalScoreText.text = "Ваш счёт: " + Score;
             gameOverPanel.SetActive(true);
         }
 

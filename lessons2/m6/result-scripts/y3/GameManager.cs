@@ -5,21 +5,17 @@ namespace Lessons.M6.Y3
 {
     public class GameManager : MonoBehaviour
     {
+        [Header("Настройки")]
         [SerializeField] private TMP_Text scoreText;
         [SerializeField] private GameObject gameOverPanel;
-        [SerializeField] private float difficultyDelay = 10f;
-        [SerializeField] private float difficultyInterval = 10f;
-        [SerializeField] private float difficultyStep = 0.2f;
 
         public int Score { get; private set; }
         public bool IsGameOver { get; private set; }
-        public float SpeedMultiplier { get; private set; } = 1f;
 
         private void Start()
         {
             gameOverPanel.SetActive(false);
             UpdateScoreText();
-            InvokeRepeating(nameof(IncreaseDifficulty), difficultyDelay, difficultyInterval);
         }
 
         public void AddScore(int points)
@@ -41,18 +37,7 @@ namespace Lessons.M6.Y3
             }
 
             IsGameOver = true;
-            CancelInvoke(nameof(IncreaseDifficulty));
             gameOverPanel.SetActive(true);
-        }
-
-        private void IncreaseDifficulty()
-        {
-            if (IsGameOver)
-            {
-                return;
-            }
-
-            SpeedMultiplier += difficultyStep;
         }
 
         private void UpdateScoreText()

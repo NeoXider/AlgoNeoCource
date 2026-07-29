@@ -12,8 +12,7 @@ namespace Lessons.M6.Y3
 
         void Update()
         {
-            float multiplier = gameManager != null ? gameManager.SpeedMultiplier : 1f;
-            transform.position += Vector3.down * baseSpeed * multiplier * Time.deltaTime;
+            transform.position += Vector3.down * baseSpeed * Time.deltaTime;
 
             if (transform.position.y < destroyY)
             {
